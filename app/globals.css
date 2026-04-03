@@ -1,0 +1,22 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@theme {
+  --color-gold-50: #fdfaf3;
+  --color-gold-100: #f9f1de;
+  --color-gold-200: #f0debd;
+  --color-gold-300: #e3c48f;
+  --color-gold-400: #d4a55f;
+  --color-gold-500: #c5893d;
+  --color-gold-600: #b57431;
+  --color-gold-700: #975d2b;
+  --color-gold-800: #7a4c27;
+  --color-gold-900: #643f23;
+  --color-gold-950: #362011;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+}
