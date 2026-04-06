@@ -24,9 +24,9 @@ const ConciergePage = ({ lang = 'en' }: ConciergePageProps) => {
   ];
 
   const sectionImages = [
-    "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?q=80&w=2069&auto=format&fit=crop", // Luxury Travel
+    "https://i.imghippo.com/files/hZN7135V.jpg?q=80&w=2069&auto=format&fit=crop", // Luxury Travel
     "https://images.unsplash.com/photo-1571896349842-33c89424de2d?q=80&w=2080&auto=format&fit=crop", // Luxury Vacation
-    "https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?q=80&w=2070&auto=format&fit=crop", // VIP Dining
+    "https://i.imghippo.com/files/OZML6888ZY.jpg?q=80&w=2070&auto=format&fit=crop", // VIP Dining
     "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?q=80&w=2069&auto=format&fit=crop", // About Us
   ];
 

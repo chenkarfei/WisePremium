@@ -39,7 +39,7 @@ const Navbar = ({ lang = 'en' }: NavbarProps) => {
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-        scrolled ? 'bg-white/95 backdrop-blur-md py-4 shadow-xl' : 'bg-transparent py-6'
+        scrolled ? 'bg-gray-900/95 backdrop-blur-md py-4 shadow-xl border-b border-white/5' : 'bg-transparent py-6'
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
@@ -48,7 +48,7 @@ const Navbar = ({ lang = 'en' }: NavbarProps) => {
             src="https://i.imghippo.com/files/Twe9225Xg.png"
             alt="Wise Premium Logo"
             fill
-            className={`object-contain transition-all duration-500 ${scrolled ? 'brightness-0' : ''}`}
+            className="object-contain transition-all duration-500"
             priority
             referrerPolicy="no-referrer"
           />
@@ -60,45 +60,31 @@ const Navbar = ({ lang = 'en' }: NavbarProps) => {
             <Link
               key={link.name}
               href={link.href}
-              className={`text-sm font-bold tracking-[0.2em] transition-all duration-300 uppercase ${
-                scrolled ? 'text-gray-900 hover:text-gold-600' : 'text-white hover:text-gold-400 drop-shadow-md'
-              }`}
+              className="text-sm font-bold tracking-[0.2em] transition-all duration-300 uppercase text-white hover:text-gold-400 drop-shadow-md"
             >
               {link.name}
             </Link>
           ))}
           <Link
             href="https://member.wisepremium.com"
-            className={`text-sm font-bold tracking-[0.2em] transition-all duration-300 uppercase border-b-2 ${
-              scrolled 
-                ? 'text-gray-900 border-gray-900 hover:text-gold-600 hover:border-gold-600' 
-                : 'text-gold-500 border-gold-500/30 hover:text-gold-400 hover:border-gold-400 drop-shadow-md'
-            }`}
+            className="text-sm font-bold tracking-[0.2em] transition-all duration-300 uppercase border-b-2 text-gold-500 border-gold-500/30 hover:text-gold-400 hover:border-gold-400 drop-shadow-md"
           >
             {t.login}
           </Link>
           
           <div className="relative group">
-            <button className={`flex items-center space-x-2 text-sm font-bold tracking-[0.1em] transition-all duration-300 cursor-pointer uppercase ${
-              scrolled ? 'text-gray-900 hover:text-gold-600' : 'text-white hover:text-gold-400 drop-shadow-md'
-            }`}>
-              <Globe className={`w-4 h-4 ${scrolled ? 'text-gold-600' : 'text-gold-500'}`} />
+            <button className="flex items-center space-x-2 text-sm font-bold tracking-[0.1em] transition-all duration-300 cursor-pointer uppercase text-white hover:text-gold-400 drop-shadow-md">
+              <Globe className="w-4 h-4 text-gold-500" />
               <span>{t.currentLang}</span>
               <ChevronDown className="w-3 h-3 transition-transform group-hover:rotate-180" />
             </button>
             
             {/* Dropdown Menu */}
             <div className="absolute top-full right-0 pt-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
-              <div className={`w-48 shadow-2xl rounded-2xl overflow-hidden border backdrop-blur-2xl ${
-                scrolled ? 'bg-white/95 border-gray-100' : 'bg-gray-900/90 border-white/10'
-              }`}>
+              <div className="w-48 shadow-2xl rounded-2xl overflow-hidden border backdrop-blur-2xl bg-gray-900/90 border-white/10">
                 <Link 
                   href={otherLangHref} 
-                  className={`flex items-center space-x-3 px-6 py-4 text-sm font-medium transition-all ${
-                    scrolled 
-                      ? 'text-gray-700 hover:bg-gold-50 hover:text-gold-600' 
-                      : 'text-white/80 hover:bg-white/10 hover:text-gold-400'
-                  }`}
+                  className="flex items-center space-x-3 px-6 py-4 text-sm font-medium transition-all text-white/80 hover:bg-white/10 hover:text-gold-400"
                 >
                   <Globe className="w-4 h-4 text-gold-500" />
                   <span>{t.otherLang}</span>
@@ -106,16 +92,14 @@ const Navbar = ({ lang = 'en' }: NavbarProps) => {
               </div>
               
               {/* Arrow Decor */}
-              <div className={`absolute top-2 right-6 w-4 h-4 rotate-45 border-t border-l ${
-                scrolled ? 'bg-white/95 border-gray-100' : 'bg-gray-900/90 border-white/10'
-              }`} />
+              <div className="absolute top-2 right-6 w-4 h-4 rotate-45 border-t border-l bg-gray-900/90 border-white/10" />
             </div>
           </div>
         </div>
 
         {/* Mobile Menu Toggle */}
         <button
-          className={`lg:hidden p-2 transition-colors ${scrolled ? 'text-gray-900' : 'text-white'}`}
+          className="lg:hidden p-2 transition-colors text-white"
           onClick={() => setIsOpen(!isOpen)}
         >
           {isOpen ? <X className="w-7 h-7" /> : <Menu className="w-7 h-7" />}
@@ -129,18 +113,14 @@ const Navbar = ({ lang = 'en' }: NavbarProps) => {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
-            className={`absolute top-full left-0 right-0 border-t shadow-2xl lg:hidden overflow-hidden ${
-              scrolled ? 'bg-white border-gray-100' : 'bg-gray-900 border-white/10'
-            }`}
+            className="absolute top-full left-0 right-0 border-t shadow-2xl lg:hidden overflow-hidden bg-gray-900 border-white/10"
           >
             <div className="flex flex-col p-8 space-y-6">
               {navLinks.map((link) => (
                 <Link
                   key={link.name}
                   href={link.href}
-                  className={`text-xl font-light tracking-[0.2em] uppercase ${
-                    scrolled ? 'text-gray-900' : 'text-white/90'
-                  }`}
+                  className="text-xl font-light tracking-[0.2em] uppercase text-white/90"
                   onClick={() => setIsOpen(false)}
                 >
                   {link.name}
@@ -148,26 +128,16 @@ const Navbar = ({ lang = 'en' }: NavbarProps) => {
               ))}
               <Link
                 href="https://member.wisepremium.com"
-                className={`text-xl font-bold tracking-[0.2em] border-b inline-block w-fit uppercase ${
-                  scrolled ? 'text-gray-900 border-gray-900' : 'text-gold-500 border-gold-500/30'
-                }`}
+                className="text-xl font-bold tracking-[0.2em] border-b inline-block w-fit uppercase text-gold-500 border-gold-500/30"
                 onClick={() => setIsOpen(false)}
               >
                 {t.login}
               </Link>
-              <div className={`pt-8 border-t flex flex-col space-y-4 ${
-                scrolled ? 'border-gray-100' : 'border-white/5'
-              }`}>
-                <span className={`text-xs font-bold uppercase tracking-[0.3em] ${
-                  scrolled ? 'text-gray-400' : 'text-white/30'
-                }`}>{t.language}</span>
+              <div className="pt-8 border-t flex flex-col space-y-4 border-white/5">
+                <span className="text-xs font-bold uppercase tracking-[0.3em] text-white/30">{t.language}</span>
                 <Link 
                   href={otherLangHref} 
-                  className={`flex items-center justify-between text-lg font-light tracking-wide p-5 rounded-2xl border transition-all ${
-                    scrolled 
-                      ? 'text-gray-900 bg-gray-50 border-gray-100 hover:bg-gray-100' 
-                      : 'text-white/90 bg-white/5 border-white/5 hover:bg-white/10'
-                  }`}
+                  className="flex items-center justify-between text-lg font-light tracking-wide p-5 rounded-2xl border transition-all text-white/90 bg-white/5 border-white/5 hover:bg-white/10"
                   onClick={() => setIsOpen(false)}
                 >
                   <div className="flex items-center space-x-3">

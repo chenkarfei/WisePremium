@@ -18,8 +18,8 @@ const NewsPage = ({ lang = 'en' }: NewsPageProps) => {
   const navT = translations[lang].nav;
 
   const articleImages = [
-    "https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?q=80&w=2070&auto=format&fit=crop", // Jewelry
-    "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?q=80&w=2070&auto=format&fit=crop", // Diamonds
+    "https://i.imghippo.com/files/Gmkp9538qWs.jpg?q=80&w=2070&auto=format&fit=crop", // Fior
+    "https://i.imghippo.com/files/KmB4225KXA.jpg?q=80&w=2098&auto=format&fit=crop", // BlueDiamonds
   ];
 
   return (
@@ -30,7 +30,7 @@ const NewsPage = ({ lang = 'en' }: NewsPageProps) => {
       <section className="relative pt-48 pb-32 md:pt-64 md:pb-48 bg-gray-900 overflow-hidden">
         <div className="absolute inset-0 z-0 opacity-40">
           <Image
-            src="https://images.unsplash.com/photo-1585314062340-f1a5a7c9328d?q=80&w=2070&auto=format&fit=crop"
+            src="https://images.unsplash.com/photo-1513694203232-719a280e022f?q=80&w=2069&auto=format&fit=crop"
             alt="News Background"
             fill
             className="object-cover"
