@@ -20,7 +20,7 @@ const Hero = ({ lang = 'en' }: HeroProps) => {
       {/* Background with overlay */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?q=80&w=2070&auto=format&fit=crop"
+          src="https://i.imghippo.com/files/DZpK9996Ks.jpeg?q=80&w=2070&auto=format&fit=crop"
           alt="Luxury Lifestyle Background"
           fill
           className="object-cover scale-105"

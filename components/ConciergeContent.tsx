@@ -36,7 +36,7 @@ const ConciergePage = ({ lang = 'en' }: ConciergePageProps) => {
       
       {/* Hero Section */}
       <section className="relative pt-48 pb-32 md:pt-64 md:pb-48 bg-gray-900 overflow-hidden">
-        <div className="absolute inset-0 z-0 opacity-40">
+        <div className="absolute inset-0 z-0 opacity-70">
           <Image
             src="https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=2070&auto=format&fit=crop"
             alt="Concierge Background"
@@ -45,7 +45,7 @@ const ConciergePage = ({ lang = 'en' }: ConciergePageProps) => {
             priority
             referrerPolicy="no-referrer"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-gray-900/50 to-gray-900" />
+          <div className="absolute inset-0 bg-gradient-to-b from-gray-900/30 to-gray-900/90" />
         </div>
         
         <div className="relative z-10 max-w-7xl mx-auto px-6 text-center">

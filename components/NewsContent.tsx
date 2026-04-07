@@ -18,8 +18,8 @@ const NewsPage = ({ lang = 'en' }: NewsPageProps) => {
   const navT = translations[lang].nav;
 
   const articleImages = [
-    "https://i.imghippo.com/files/Gmkp9538qWs.jpg?q=80&w=2070&auto=format&fit=crop", // Fior
-    "https://i.imghippo.com/files/KmB4225KXA.jpg?q=80&w=2098&auto=format&fit=crop", // BlueDiamonds
+    "https://i.imghippo.com/files/OTdj4040IKM.jpeg", // Fior
+    "https://i.imghippo.com/files/MQf5115Ss.jpeg", // BlueDiamonds
   ];
 
   return (
@@ -28,7 +28,7 @@ const NewsPage = ({ lang = 'en' }: NewsPageProps) => {
       
       {/* Hero Section */}
       <section className="relative pt-48 pb-32 md:pt-64 md:pb-48 bg-gray-900 overflow-hidden">
-        <div className="absolute inset-0 z-0 opacity-40">
+        <div className="absolute inset-0 z-0 opacity-70">
           <Image
             src="https://images.unsplash.com/photo-1513694203232-719a280e022f?q=80&w=2069&auto=format&fit=crop"
             alt="News Background"
@@ -37,7 +37,7 @@ const NewsPage = ({ lang = 'en' }: NewsPageProps) => {
             priority
             referrerPolicy="no-referrer"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-gray-900/50 to-gray-900" />
+          <div className="absolute inset-0 bg-gradient-to-b from-gray-900/30 to-gray-900/90" />
         </div>
         
         <div className="relative z-10 max-w-7xl mx-auto px-6 text-center">
@@ -73,12 +73,12 @@ const NewsPage = ({ lang = 'en' }: NewsPageProps) => {
                 transition={{ duration: 1, delay: index * 0.2 }}
                 className="group flex flex-col h-full"
               >
-                <div className="relative aspect-[16/10] w-full rounded-2xl overflow-hidden shadow-xl mb-10">
+                <div className="relative aspect-[4/5] w-full rounded-2xl overflow-hidden shadow-xl mb-10 bg-[#1a1a1a]">
                   <Image
                     src={articleImages[index]}
                     alt={article.title}
                     fill
-                    className="object-cover group-hover:scale-105 transition-transform duration-700"
+                    className="object-contain group-hover:scale-105 transition-transform duration-700"
                     referrerPolicy="no-referrer"
                   />
                   <div className="absolute top-6 left-6 bg-white/90 backdrop-blur-md px-4 py-2 rounded-lg flex items-center space-x-2 text-xs font-bold tracking-widest text-gray-900 shadow-sm">
@@ -94,15 +94,19 @@ const NewsPage = ({ lang = 'en' }: NewsPageProps) => {
                   {article.description}
                 </p>
                 
-                <Link
-                  href={article.link}
-                  target="_blank"
-                  className="inline-flex items-center space-x-4 text-sm font-bold tracking-[0.3em] uppercase text-gray-900 hover:text-gold-600 transition-all group/link"
-                >
-                  <span>{article.cta}</span>
-                  <ExternalLink className="w-4 h-4 transition-transform group-hover/link:translate-x-1 group-hover/link:-translate-y-1" />
-                </Link>
-                <div className="mt-6 h-[1px] w-20 bg-gold-600" />
+                {!article.title.includes('Blue Diamonds') && (
+                  <>
+                    <Link
+                      href={article.link}
+                      target="_blank"
+                      className="inline-flex items-center space-x-4 text-sm font-bold tracking-[0.3em] uppercase text-gray-900 hover:text-gold-600 transition-all group/link"
+                    >
+                      <span>{article.cta}</span>
+                      <ExternalLink className="w-4 h-4 transition-transform group-hover/link:translate-x-1 group-hover/link:-translate-y-1" />
+                    </Link>
+                    <div className="mt-6 h-[1px] w-20 bg-gold-600" />
+                  </>
+                )}
               </motion.div>
             ))}
           </div>

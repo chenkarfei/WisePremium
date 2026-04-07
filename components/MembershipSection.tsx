@@ -81,12 +81,12 @@ const MembershipSection = ({ lang = 'en' }: MembershipSectionProps) => {
             className="relative"
           >
             <div className="bg-white p-8 md:p-12 rounded-3xl shadow-2xl shadow-gold-500/10 border border-gray-100">
-              <div className="relative w-full aspect-[1.586/1] mb-12 overflow-hidden rounded-xl shadow-lg bg-white">
+              <div className="relative w-full aspect-[1.586/1] mb-12">
                 <Image
-                  src="https://i.imghippo.com/files/iPXG1970ohg.png"
+                  src="https://i.imghippo.com/files/iBG7970Qs.png"
                   alt="Wise Premium Card"
                   fill
-                  className="object-cover scale-[1.08]"
+                  className="object-contain"
                   referrerPolicy="no-referrer"
                 />
               </div>
