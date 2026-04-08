@@ -30,7 +30,7 @@ const NewsPage = ({ lang = 'en' }: NewsPageProps) => {
       <section className="relative pt-48 pb-32 md:pt-64 md:pb-48 bg-gray-900 overflow-hidden">
         <div className="absolute inset-0 z-0 opacity-70">
           <Image
-            src="https://images.unsplash.com/photo-1513694203232-719a280e022f?q=80&w=2069&auto=format&fit=crop"
+            src="https://i.imghippo.com/files/Ifp2306VwM.png?q=80&w=2069&auto=format&fit=crop"
             alt="News Background"
             fill
             className="object-cover"
