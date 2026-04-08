@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { motion } from 'motion/react';
-import { ExternalLink, Calendar } from 'lucide-react';
+import { ExternalLink } from 'lucide-react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { translations, Language } from '@/lib/translations';
@@ -63,7 +63,7 @@ const NewsPage = ({ lang = 'en' }: NewsPageProps) => {
       {/* Articles List */}
       <section className="py-32 bg-white">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-16 lg:gap-24">
+          <div className="space-y-32 md:space-y-48">
             {t.articles.map((article, index) => (
               <motion.div
                 key={article.title}
@@ -71,9 +71,9 @@ const NewsPage = ({ lang = 'en' }: NewsPageProps) => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 1, delay: index * 0.2 }}
-                className="group flex flex-col h-full"
+                className={`group flex flex-col md:flex-row gap-12 lg:gap-24 items-center ${index % 2 === 1 ? 'md:flex-row-reverse' : ''}`}
               >
-                <div className="relative aspect-[4/5] w-full rounded-2xl overflow-hidden shadow-xl mb-10 bg-[#1a1a1a]">
+                <div className="relative aspect-[4/5] w-full md:w-5/12 rounded-2xl overflow-hidden shadow-2xl bg-[#1a1a1a]">
                   <Image
                     src={articleImages[index]}
                     alt={article.title}
@@ -81,32 +81,30 @@ const NewsPage = ({ lang = 'en' }: NewsPageProps) => {
                     className="object-contain group-hover:scale-105 transition-transform duration-700"
                     referrerPolicy="no-referrer"
                   />
-                  <div className="absolute top-6 left-6 bg-white/90 backdrop-blur-md px-4 py-2 rounded-lg flex items-center space-x-2 text-xs font-bold tracking-widest text-gray-900 shadow-sm">
-                    <Calendar className="w-3 h-3 text-gold-600" />
-                    <span>2023</span>
-                  </div>
                 </div>
                 
-                <h2 className="text-2xl md:text-3xl font-serif font-light mb-6 text-gray-900 group-hover:text-gold-600 transition-colors">
-                  {article.title}
-                </h2>
-                <p className="text-gray-600 font-light leading-relaxed tracking-wide mb-10 flex-grow">
-                  {article.description}
-                </p>
-                
-                {!article.title.includes('Blue Diamonds') && (
-                  <>
-                    <Link
-                      href={article.link}
-                      target="_blank"
-                      className="inline-flex items-center space-x-4 text-sm font-bold tracking-[0.3em] uppercase text-gray-900 hover:text-gold-600 transition-all group/link"
-                    >
-                      <span>{article.cta}</span>
-                      <ExternalLink className="w-4 h-4 transition-transform group-hover/link:translate-x-1 group-hover/link:-translate-y-1" />
-                    </Link>
-                    <div className="mt-6 h-[1px] w-20 bg-gold-600" />
-                  </>
-                )}
+                <div className="w-full md:w-7/12 flex flex-col">
+                  <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif font-light mb-8 text-gray-900 group-hover:text-gold-600 transition-colors leading-tight">
+                    {article.title}
+                  </h2>
+                  <p className="text-lg text-gray-600 font-light leading-relaxed tracking-wide mb-10">
+                    {article.description}
+                  </p>
+                  
+                  {!article.title.includes('Blue Diamonds') && (
+                    <div className="flex flex-col items-start">
+                      <Link
+                        href={article.link}
+                        target="_blank"
+                        className="inline-flex items-center space-x-4 text-sm font-bold tracking-[0.3em] uppercase text-gray-900 hover:text-gold-600 transition-all group/link"
+                      >
+                        <span>{article.cta}</span>
+                        <ExternalLink className="w-4 h-4 transition-transform group-hover/link:translate-x-1 group-hover/link:-translate-y-1" />
+                      </Link>
+                      <div className="mt-6 h-[1px] w-20 bg-gold-600" />
+                    </div>
+                  )}
+                </div>
               </motion.div>
             ))}
           </div>

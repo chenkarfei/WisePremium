@@ -70,12 +70,12 @@ const Footer = ({ lang = 'en' }: FooterProps) => {
             </h4>
             <ul className="space-y-4">
               <li>
-                <Link href="/privacy.html" className="text-white/60 hover:text-gold-400 transition-colors font-light tracking-wide">
+                <Link href={lang === 'en' ? '/privacy' : '/cn/privacy'} className="text-white/60 hover:text-gold-400 transition-colors font-light tracking-wide">
                   {t.privacy}
                 </Link>
               </li>
               <li>
-                <Link href="/tnc.html" className="text-white/60 hover:text-gold-400 transition-colors font-light tracking-wide">
+                <Link href={lang === 'en' ? '/tnc' : '/cn/tnc'} className="text-white/60 hover:text-gold-400 transition-colors font-light tracking-wide">
                   {t.terms}
                 </Link>
               </li>
