@@ -16,18 +16,18 @@ const Hero = ({ lang = 'en' }: HeroProps) => {
   const navT = translations[lang].nav;
 
   return (
-    <section className="relative h-screen min-h-[800px] flex items-center justify-center overflow-hidden">
+    <section className="relative h-screen min-h-[800px] flex items-center justify-center overflow-hidden bg-gray-900">
       {/* Background with overlay */}
-      <div className="absolute inset-0 z-0">
+      <div className="absolute inset-0 z-0 opacity-90">
         <Image
-          src="https://i.imghippo.com/files/DZpK9996Ks.jpeg?q=80&w=2070&auto=format&fit=crop"
+          src="https://i.imghippo.com/files/mVT2260HVY.png?q=80&w=2070&auto=format&fit=crop"
           alt="Luxury Lifestyle Background"
           fill
           className="object-cover scale-105"
           priority
           referrerPolicy="no-referrer"
         />
-        <div className="absolute inset-0 bg-black/40 backdrop-blur-[2px]" />
+        <div className="absolute inset-0 bg-gradient-to-b from-gray-900/10 to-gray-900/50" />
       </div>
 
       <div className="relative z-10 max-w-5xl mx-auto px-6 text-center text-white">
