@@ -156,7 +156,7 @@ export const translations = {
       subtitle: 'Updates from the World of Luxury',
       articles: [
         {
-          title: 'Fior - Wise Premium',
+          title: 'Wise Premium Jewelry',
           description: '流连忘返 留你一生 恋你一世. 榴莲 谐音留恋 表示对她的留恋与不舍 永不分离. 榴莲外壳坚硬 代表对爱坚定不移 初心不变. 榴莲号称水果之王 在水果中属于佼佼者 代表着对妳的爱是最丰满的. 独一无二的榴莲价格高昂 代表着在心中高贵的地位. 黄金榴莲 造型立体 斟酌饱满 足金打造 时尚活跃.',
           link: 'https://fiorjewellery.com/product?designer_id=10',
           cta: 'Shop Now!',
@@ -346,7 +346,7 @@ export const translations = {
       subtitle: '来自奢华世界的更新',
       articles: [
         {
-          title: 'Fior - Wise Premium',
+          title: 'Wise Premium Jewelry',
           description: '流连忘返 留你一生 恋你一世. 榴莲 谐音留恋 表示对她的留恋与不舍 永不分离. 榴莲外壳坚硬 代表对爱坚定不移 初心不变. 榴莲号称水果之王 在水果中属于佼佼者 代表着对妳的爱是最丰满的. 独一无二的榴莲价格高昂 代表着在心中高贵的地位. 黄金榴莲 造型立体 斟酌饱满 足金打造 时尚活跃.',
           link: 'https://fiorjewellery.com/product?designer_id=10',
           cta: '立即选购',

@@ -90,20 +90,6 @@ const NewsPage = ({ lang = 'en' }: NewsPageProps) => {
                   <p className="text-lg text-gray-600 font-light leading-relaxed tracking-wide mb-10">
                     {article.description}
                   </p>
-                  
-                  {!article.title.includes('Blue Diamonds') && (
-                    <div className="flex flex-col items-start">
-                      <Link
-                        href={article.link}
-                        target="_blank"
-                        className="inline-flex items-center space-x-4 text-sm font-bold tracking-[0.3em] uppercase text-gray-900 hover:text-gold-600 transition-all group/link"
-                      >
-                        <span>{article.cta}</span>
-                        <ExternalLink className="w-4 h-4 transition-transform group-hover/link:translate-x-1 group-hover/link:-translate-y-1" />
-                      </Link>
-                      <div className="mt-6 h-[1px] w-20 bg-gold-600" />
-                    </div>
-                  )}
                 </div>
               </motion.div>
             ))}
